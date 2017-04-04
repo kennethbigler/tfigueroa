@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico" />
+    <!-- Device Compatibility -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Keywords for SEO, feel free to ignore this, it's an Intranet -->
+    <meta name="keywords" content="Taneisha Figueroa">
+    <meta name="description" content="Taneisha Figueroa">
+    <meta name="author" content="Kenneth Bigler">
+    <title>Taneisha Figueroa</title>
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- angular -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.10/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.10/angular-route.min.js"></script>
+    <!-- My scripts -->
+    <script type="text/javascript" src="app/app.js"></script>
+    <!-- Google Analytics -->
+    <script type="text/javascript" src="assets/js/analytics.js"></script>
+</head>
+<!-- Body -->
+<body ng-app="myApp" ng-controller="HomeController">
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container emph">
+                <h2>Taneisha Figueroa</h2>
+                <a class="navbar-brand" ng-class="getClass('/')" href="#/">Actress, Los Angeles CA</a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Items -->
+                <div id="navbar" class="collapse navbar-collapse pull-right">
+                    <ul class="nav navbar-nav">
+                        <li ng-class="getClass('/home')"><a href="#/home" ng-click="closeNav()">Home</a></li>
+                        <li ng-class="getClass('/resume')"><a href="#/resume" ng-click="closeNav()">Resume</a></li>
+                        <li ng-class="getClass('/reel')"><a href="#/reel" ng-click="closeNav()">Reel</a></li>
+                        <li ng-class="getClass('/gallery')"><a href="#/gallery" ng-click="closeNav()">Gallery</a></li>
+                        <li ng-class="getClass('/contact')"><a href="#/contact" ng-click="closeNav()">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Main Content loaded via Angular -->
+        <div ng-view class="mainBody"></div>
+    </div>
+</body>
+<footer>
+    <div class="container">
+        <div class="pull-left">© {{date| date:'yyyy'}} - Taneisha Figueroa</div>
+        <div class="pull-right">
+            <a href="https://www.facebook.com/taneisha.figueroa.1" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> &nbsp;&nbsp;
+            <a href="https://twitter.com/taneishafig" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a> &nbsp;&nbsp;
+            <a href="https://www.instagram.com/taneisha_figueroa/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a> &nbsp;&nbsp;
+            <a href="https://vimeo.com/taneisha" target="_blank"><i class="fa fa-vimeo" aria-hidden="true"></i></a> &nbsp;&nbsp;
+            <a href="https://www.youtube.com/channel/UCpADvRZqnYVf1VBz1VQMubg" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</footer>
+<!-- Display while loading content -->
+<div ng-if="false">
+    <h1>Loading the website, please hold on...</h1>
+</div>
+</html>
