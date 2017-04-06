@@ -3,16 +3,16 @@
         <h3>Contact Taneisha</h3>
         <hr />
         <div class="form-group">
-            <label for="emailSubject" class="col-xs-2 col-form-label">Subject:</label>
-            <div class="col-xs-10">
+            <label for="emailSubject" class="col-xs-4 col-form-label">Subject:</label>
+            <div class="col-xs-8">
                 <input class="form-control margin-bot" type="text" name="emailSubject" ng-model="emailSubject" required>
             </div>
-            <label for="emailBody" class="col-xs-12 col-form-label">What is the problem?</label>
-            <div class="col-xs-12">
+            <label for="emailBody" class="col-xs-4 col-form-label">Message:</label>
+            <div class="col-xs-8">
                 <textarea class="form-control margin-bot" name="emailBody" ng-model="emailBody" rows="6"></textarea>
             </div>
         </div>
         <hr />
-        <button type="button" class="btn btn-primary pull-right" ng-click="sendSupportEmail()">Send</button>
+        <button type="button" class="btn btn-primary pull-right" ng-click="sendContactEmail(emailSubject, emailBody)">Send</button>
     </div>
 </div>

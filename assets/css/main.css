@@ -40,17 +40,26 @@ body {
   text-align: right; }
 
 .emph > h2 {
-  color: #DF744A;
-  margin-bottom: 0;
-  margin-top: 60px; }
+  margin-top: 60px;
+  margin-bottom: 0px;
+  color: #DF744A; }
 .emph .nav {
   margin-bottom: 20px; }
 
-.margin-bot {
+.margin-bot, .youtube-player {
   margin-bottom: 10px; }
 
+.youtube-player {
+  width: 100%; }
+
 .btn-primary {
-  background-color: #BFD8D2; }
+  background-color: #BFD8D2;
+  border-color: #BFD8D2;
+  font-size: 18px; }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:active:hover, .btn-primary:active:focus {
+    background-color: #FEDCD2;
+    border-color: #FEDCD2;
+    color: #DF744A; }
 
 footer {
   background-color: #FEDCD2;
@@ -68,8 +77,8 @@ figcaption {
 
 #main_photo {
   max-width: 350px;
-  margin-bottom: 40px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  margin-bottom: 40px; }
 
 .headshot {
   max-width: 572px;

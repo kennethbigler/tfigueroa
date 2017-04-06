@@ -64,9 +64,8 @@ body {
 }
 .emph {
     > h2 {
+        @include margin-all(60px, null, 0px, null);
         color: $colHighlight;
-        margin-bottom: 0;
-        margin-top: 60px;
     }
     .nav {
         margin-bottom: 20px;
@@ -75,8 +74,19 @@ body {
 .margin-bot {
     margin-bottom: 10px;
 }
+.youtube-player {
+    @extend .margin-bot;
+    width: 100%;
+}
 .btn-primary {
-    background-color: #BFD8D2;
+    background-color: $bgDefault;
+    border-color: $bgDefault;
+    font-size: 18px;
+    &:hover, &:focus, &:active, &:active:hover, &:active:focus {
+        background-color: $peach;
+        border-color: $peach;
+        color: $colHighlight;
+    }
 }
 footer {
     background-color: $peach;
@@ -96,8 +106,7 @@ figcaption {
 }
 #main_photo {
     max-width: 350px;
-    margin-bottom: 40px;
-    margin-top: 20px;
+    @include margin-all(20px, null, 40px, null);
 }
 .headshot {
     @extend %shadow;

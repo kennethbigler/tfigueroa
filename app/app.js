@@ -1,7 +1,9 @@
 /*global angular, $*/
 var app = angular.module('myApp', ['ngRoute']);
 
+// --------------------------------------------------
 // configure routes
+// --------------------------------------------------
 app.config(function ($routeProvider) {
     "use strict";
     $routeProvider
@@ -20,9 +22,12 @@ app.config(function ($routeProvider) {
         }).otherwise({ redirectTo: '/' });
 });
 
+// --------------------------------------------------
+// controller
+// --------------------------------------------------
 // testing variable to get access to angular scope
 // var test = angular.element($('#navbar')).scope();
-app.controller('HomeController', ['$scope', '$location', '$log', function ($scope, $location, $log) {
+app.controller('HomeController', ['$scope', '$location', '$window', '$log', function ($scope, $location, $window, $log) {
     'use strict';
     
     //get the date for the bottom corner
@@ -39,4 +44,14 @@ app.controller('HomeController', ['$scope', '$location', '$log', function ($scop
     
     // close the navigation
     $scope.closeNav = function () { $("#navbar").collapse('hide'); };
+    
+    // --------------------------------------------------
+    // contact email section
+    // --------------------------------------------------
+    $scope.sendContactEmail = function (eSubject, eBody) {
+        $log.log("Subject: " + eSubject + " Body: " + eBody);
+        var body;
+        body = eBody.replace(/(?:\r\n|\r|\n)/g, '%0D%0A');
+        $window.location.href = 'mailto:taneishafigueroa787@gmail.com?subject=' + eSubject + '&body=' + body;
+    };
 }]);
